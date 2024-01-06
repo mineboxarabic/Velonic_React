@@ -46,14 +46,14 @@ const AllRoutes = (props: IRoutesProps) => {
 						<Route
 							path={route.path}
 							element={
-								isAuthenticated === false ? (
+								/*isAuthenticated === false ? (
 									<Navigate
 										to={{
 											pathname: '/auth/login',
 											search: 'next=' + route.path,
 										}}
 									/>
-								) : (
+								) : */(
 									<Layout {...props}>{route.element}</Layout>
 								)
 							}

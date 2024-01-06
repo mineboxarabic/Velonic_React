@@ -3,6 +3,7 @@ import { Route, RouteProps } from 'react-router-dom'
 
 // components
 import PrivateRoute from './PrivateRoute'
+import Home from '@/pages/home/home'
 
 // lazy load all the views
 
@@ -120,12 +121,6 @@ const dashboardRoutes: RoutesProps = {
 	header: 'Navigation',
 	children: [
 		{
-			path: '/',
-			name: 'Root',
-			element: <Dashboard />,
-			route: PrivateRoute,
-		},
-		{
 			path: '/dashboard',
 			name: 'Dashboard',
 			element: <Dashboard />,
@@ -133,6 +128,7 @@ const dashboardRoutes: RoutesProps = {
 		},
 	],
 }
+
 
 // pages
 const customPagesRoutes = {
@@ -562,6 +558,12 @@ const authRoutes: RoutesProps[] = [
 
 // public routes
 const otherPublicRoutes = [
+	{
+		path: '/',
+		name: 'Root',
+		element: <Home />,
+		route: PrivateRoute,
+	},
 	{
 		path: '*',
 		name: 'Error - 404',
